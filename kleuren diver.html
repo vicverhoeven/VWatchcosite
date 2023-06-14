@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Kleur kiezen</title>
+  <style>
+    /* Stijlen voor de dial-afbeelding */
+    #dialImage {
+      max-width: 200px;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+  <h1>Kies een kleur</h1>
+
+  <label for="color">Kleur:</label>
+  <select id="color" name="color" onchange="updateDialImage()">
+    <option value="blauw">Blauw</option>
+    <option value="groen">Groen</option>
+    <option value="zwart">Zwart</option>
+    <!-- Voeg hier meer kleuropties toe -->
+  </select>
+
+  <div id="dialImageContainer">
+    <img id="dialImage" src="" alt="Dial Image">
+  </div>
+
+  <button onclick="addToCart()">Toevoegen aan winkelwagen</button>
+
+  <script>
+    function updateDialImage() {
+      var selectedColor = document.getElementById('color').value;
+      var dialImage = document.getElementById('dialImage');
+      var dialImageContainer = document.getElementById('dialImageContainer');
+
+      // Verander de afbeelding van de dial op basis van de geselecteerde kleur
+       if (selectedColor === 'blauw') {
+        dialImage.src = 'https://ae01.alicdn.com/kf/Sc87afb2e543a471e873d14abb65d788dI/28-5Mm-Dial-Fit-Miyota-8215-Eta-2836-Mingzhu-DG2813-Beweging-Horloges-Accessoires-C3-Lichtgevende-Voor.jpg_640x640.jpg';
+      } else if (selectedColor === 'groen') {
+        dialImage.src = 'https://ae01.alicdn.com/kf/S4ad8ad7275164c25b2b956548e696f98x/28-5Mm-Dial-Fit-Miyota-8215-Eta-2836-Mingzhu-DG2813-Beweging-Horloges-Accessoires-C3-Lichtgevende-Voor.jpg_Q90.jpg_.webp';
+      } else if (selectedColor === 'zwart') {
+        dialImage.src = 'https://ae01.alicdn.com/kf/S8da748e5395f45bda9e51e375daff057x/28-5Mm-Dial-Fit-Miyota-8215-Eta-2836-Mingzhu-DG2813-Beweging-Horloges-Accessoires-C3-Lichtgevende-Voor.jpg_Q90.jpg_.webp';
+      } else {
+        dialImage.src = ''; // Geen afbeelding weergeven als er geen overeenkomende kleur is
+      }
+
+      dialImageContainer.style.display = dialImage.src ? 'block' : 'none'; // Toon of verberg de afbeelding
+    }
+
+    function addToCart() {
+      var selectedColor = document.getElementById('color').value;
+      // Stuur de geselecteerde kleur terug naar de hoofdpagina en voeg deze toe aan de winkelwagen
+      window.opener.addToCart(selectedColor);
+      window.close();
+    }
+  </script>
+</body>
+</html>

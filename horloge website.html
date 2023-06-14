@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Horloge samensteller</title>
+  <style>
+    /* Stijlen voor horloges */
+    .watch {
+      display: inline-block;
+      margin: 10px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      width: 200px;
+    }
+    .watch img {
+      width: 100%;
+      height: auto;
+    }
+    .watch h3 {
+      text-align: center;
+    }
+    .watch .price {
+      text-align: center;
+      font-weight: bold;
+      margin-top: 5px;
+    }
+    /* Stijlen voor winkelwagen */
+    .cart {
+      margin-top: 20px;
+      padding: 10px;
+      border: 1px solid #ccc;
+    }
+    .cart ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    .cart li {
+      margin-bottom: 10px;
+    }
+    .cart li button {
+      margin-left: 10px;
+    }
+    body {
+    background-color: #ffffff;
+    font-family: Arial, sans-serif;
+  }
+
+  h1, h2, h3 {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    color: #333;
+  }
+
+  .dropdown {
+      position: relative;
+      display: inline-block;
+      margin-top: 10px;
+      margin-left: 10px;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .dropdown-content a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #f1f1f1;
+    }
+
+    .dropdown .dropbtn {
+      background-color: #fff;
+      color: #333;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+      font-family: "Marcellus_SC", sans-serif;
+    }
+
+    .line {
+      width: 100%; /* Pas de breedte van de lijn hier aan */
+      margin: 0 auto;
+      border-bottom: 1px solid #ccc;
+      line-height: 0.1em;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="dropdown">
+    <button class="dropbtn">≡ MENU</button>
+    <div class="dropdown-content">
+      <a href="C:\Users\Vic\Downloads\horloges\voorpagina.html">Home</a>
+      <a href="C:\Users\Vic\Downloads\horloges\about us.html">About Us</a>
+      <a href="#">Reviews</a>
+      <!-- Voeg hier andere menu-opties toe -->
+    </div>
+  </div>
+  
+  
+  <img src="https://drive.google.com/uc?export=view&id=1VWcjA-MdkeX0ZSmYNMzXmuPmF3-QwaOc" alt="Logo" style="width: 100%; max-width: 200px; display: block; margin: 0 auto;">
+  <div class="line"></div>
+
+  <h2>Dials</h2>
+  <h5>Custom logo possible</h5>
+  <div class="watch" id="dial1">
+    <img src="https://ae01.alicdn.com/kf/Hf751d1140b8343299ddcdea982d7407eA/33-8mm-zwart-zilver-groen-blauw-steriele-wijzerplaat-lichtgevende-wijzerplaat-past-nh35-nh35a-nh36-nh36a-bewegingswijzerplaat.jpg_Q90.jpg_.webp" alt="Dial 1">
+    <h3>33.8mm Dial pilot</h3>
+    <div class="price">€20</div>
+    <button onclick="addToCart('dial1')">Toevoegen aan winkelwagen</button>
+    <a href="C:\Users\Vic\Downloads\horloges\kleuren.html">Kleur kiezen</a>
+  </div>
+
+  <div class="watch" id="dial2">
+    <img src="https://ae01.alicdn.com/kf/S48c6d75c0fcb4ce0b9448858666d2ac3n/28-5Mm-Dial-Fit-Miyota-8215-Eta-2836-Mingzhu-DG2813-Beweging-Horloges-Accessoires-C3-Lichtgevende-Voor.jpg_Q90.jpg_.webp" alt="Dial 2">
+    <h3>Diver Dial</h3>
+    <div class="price">€15</div>
+    <button onclick="addToCart('dial2')">Toevoegen aan winkelwagen</button>
+    <a href="C:\Users\Vic\Downloads\horloges\kleuren diver.html">Kleur kiezen</a>
+  </div>
+
+  <!-- Voeg hier meer dial-elementen toe -->
+
+  <h2>Cases</h2>
+  <div class="watch" id="case1">
+    <img src="https://ae01.alicdn.com/kf/Hdb6b62e14cbb418bbb3083d5ddbc5144f/40Mm-Case-Heren-Horloges-Accessoire-Onderdelen-316L-Rvs-Voor-Seiko-Nh35-Nh36-Dial-Beweging-Fit-20Mm.jpg_Q90.jpg_.webp" alt="Case 1">
+    <h3>spitfire Case</h3>
+    <div class="price">€40</div>
+    <button onclick="addToCart('case1')">Toevoegen aan winkelwagen</button>
+  </div>
+
+  <div class="watch" id="case2">
+    <img src="https://ae01.alicdn.com/kf/S1a26e3b2bd2444ba80a9322c8aad8a20r/Luxe-Merk-40Mm-Submariner-Case-Horloge-Keramische-Bezel-Roestvrij-Staal-Saffier-Glas-Vergrootglas-Venster-Kroon-En.jpg_Q90.jpg_.webp" alt="Case 2">
+    <h3>Diver black </h3>
+    <div class="price">€45</div>
+    <button onclick="addToCart('case2')">Toevoegen aan winkelwagen</button>
+  </div>
+
+  <div class="watch" id="case3">
+    <img src="https://ae01.alicdn.com/kf/S0c89b66c12944674a758124cb7d87f5dd/Luxe-Merk-40Mm-Submariner-Case-Horloge-Keramische-Bezel-Roestvrij-Staal-Saffier-Glas-Vergrootglas-Venster-Kroon-En.jpg_640x640.jpg" alt="Case 3">
+    <h3>Diver green </h3>
+    <div class="price">€45</div>
+    <button onclick="addToCart('case2')">Toevoegen aan winkelwagen</button>
+  </div>
+
+  <div class="watch" id="case4">
+    <img src="https://ae01.alicdn.com/kf/Se26548b8b4c34f69a428a74caae95bd8d/Luxe-Merk-40Mm-Submariner-Case-Horloge-Keramische-Bezel-Roestvrij-Staal-Saffier-Glas-Vergrootglas-Venster-Kroon-En.jpg_640x640.jpg" alt="Case 4">
+    <h3>pilot </h3>
+    <div class="price">$90</div>
+    <button onclick="addToCart('case2')">Toevoegen aan winkelwagen</button>
+  </div>
+  <!-- link naar product https://nl.aliexpress.com/item/1005004883739047.html?spm=a2g0o.productlist.main.19.6d136995q3rOFm&algo_pvid=0316f2b7-67d5-43e4-940c-97b65d238385&algo_exp_id=0316f2b7-67d5-43e4-940c-97b65d238385-9&pdp_npi=3%40dis%21EUR%21116.2%2131.38%21%21%21%21%21%402100b78b16866821586976401d07b2%2112000030885807079%21sea%21BE%21835164157&curPageLogUid=smNJBaXeESmY  -->
+
+  <div class="watch" id="case5">
+    <img src="https://ae01.alicdn.com/kf/S1fcacb792aea4b47988f250735a8dcc95/Nh34-Horloge-Gmt-Horloge-Case-40Mm-Heren-Horloge-40Mm-NH35-Beweging-Rvs-904L-Saffierglas-Nh36-watch.jpg_640x640.jpg" alt="Case 5">
+    <h3>pilot full set</h3>
+    <div class="price">€60</div>
+    <button onclick="addToCart('case2')">Toevoegen aan winkelwagen</button>
+  </div>
+  <!-- link naar product https://nl.aliexpress.com/item/1005004955927734.html?spm=a2g0o.productlist.seoads.5.446840ddKG8CUY&p4p_pvid=2023061312091511078034274961640017742078_3&s=p -->
+  <!-- Voeg hier meer case-elementen toe -->
+
+  <h2>Hands</h2>
+  <div class="watch" id="hand1">
+    <img src="https://ae01.alicdn.com/kf/S1b0db5430d2b43ca8f237a205aff81c4W/Horloge-Handen-Nh35-Nh36-Wijzers-Groene-Lichtgevende-Handen-Tweedehands-Horloge-Accessoires-Horloge-Wijzer-Wijzer-Horloge-Handen.jpg_640x640.jpg" alt="Hand 1">
+    <h3>Hand pilot</h3>
+    <div class="price">€10</div>
+    <button onclick="addToCart('hand1')">Toevoegen aan winkelwagen</button>
+  </div>
+
+  <div class="watch" id="hand2">
+    <img src="hand2.jpg" alt="Hand 2">
+    <h3>Hand pilot</h3>
+    <div class="price">€10</div>
+    <button onclick="addToCart('hand2')">Toevoegen aan winkelwagen</button>
+  </div>
+
+  <!-- Voeg hier meer hand-elementen toe -->
+
+  <h2>Movements</h2>
+  <div class="watch" id="movement1">
+    <img src="https://ae01.alicdn.com/kf/S2bbae9fd3ca54e11abec284185dc42e3i/NH35-Beweging-Dag-Datum-Set-Hoge-Nauwkeurigheid-Automatische-Mechanische-Horloge-Met-Beweging-Horloge-Staal-Stem.jpeg_Q90.jpeg_.webp" alt="Movement 1">
+    <h3>Movement 1</h3>
+    <div class="price">$50</div>
+    <button onclick="addToCart('movement1')">Toevoegen aan winkelwagen</button>
+  </div>
+
+  <div class="watch" id="movement2">
+    <img src="movement2.jpg" alt="Movement 2">
+    <h3>Movement 2</h3>
+    <div class="price">$70</div>
+    <button onclick="addToCart('movement2')">Toevoegen aan winkelwagen</button>
+  </div>
+
+  <!-- Voeg hier meer movement-elementen toe -->
+
+  <h2>Winkelwagen</h2>
+  <div class="cart" id="cart">
+    <ul>
+      <!-- De items worden hier dynamisch toegevoegd -->
+    </ul>
+    <button onclick="checkout()">Afrekenen</button>
+  </div>
+
+  <script>
+    var cartItems = []; // Array om geselecteerde items bij te houden
+
+    // Functie om item aan winkelwagen toe te voegen
+    function addToCart(itemId) {
+      cartItems.push(itemId);
+      updateCart();
+    }
+
+    // Functie om winkelwagen bij te werken
+    function updateCart() {
+      var cartElement = document.getElementById('cart');
+      var cartList = cartElement.getElementsByTagName('ul')[0];
+      cartList.innerHTML = ''; // Wis de huidige inhoud van de winkelwagen
+
+      for (var i = 0; i < cartItems.length; i++) {
+        var listItem = document.createElement('li');
+        listItem.innerHTML = cartItems[i];
+        cartList.appendChild(listItem);
+      }
+    }
+
+    // Functie voor het afrekenen
+    function checkout() {
+      // Plaats hier de code om het afrekenproces te voltooien
+      alert('Bedankt voor uw bestelling!');
+      cartItems = []; // Leeg de winkelwagen na het afrekenen
+      updateCart();
+    }
+  </script>
+</body>
+</html>

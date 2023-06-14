@@ -1,0 +1,38 @@
+/* Stijlen voor horloges */
+.watch {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    width: 200px;
+  }
+  .watch img {
+    width: 100%;
+    height: auto;
+  }
+  .watch h3 {
+    text-align: center;
+  }
+  .watch .price {
+    text-align: center;
+    font-weight: bold;
+    margin-top: 5px;
+  }
+  
+  /* Stijlen voor winkelwagen */
+  .cart {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+  }
+  .cart ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  .cart li {
+    margin-bottom: 10px;
+  }
+  .cart li button {
+    margin-left: 10px;
+  }
+  
